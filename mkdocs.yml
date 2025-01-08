@@ -1,0 +1,4 @@
+site_name: Server Guardian Docs
+site_url: https://serverguardian.net/docs
+theme:
+  name: material
