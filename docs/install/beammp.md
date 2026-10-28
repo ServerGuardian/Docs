@@ -13,9 +13,21 @@ The plugin is in the [BeamMP_Plugin](https://github.com/ServerGuardian/BeamMP_Pl
 3. Make sure **`curl`** is installed on the host. BeamMP's Lua cannot make web requests itself, so the plugin calls `curl`.
 4. Restart the server.
 
+## Recording bans
+
+BeamMP has no ban system of its own, so ServerGuardian only knows about bans you record. The plugin adds console commands for this:
+
+- `sgban <player> [reason]` removes the player and records a permanent ban.
+- `sgtempban <player> <hours> [reason]` does the same for a set number of hours.
+- `sgunban <ban id>` ends a ban early (the id is printed when you record the ban).
+
+A recorded ban applies to all of your servers. The player is told only a fixed message with the appeal link, never your reason, but **the reason you type is shown to the player in their portal**, so keep it factual. Guests have no account, so they cannot be banned this way; use BeamMP's own `kick`. Bans made with other plugins are not seen.
+
+To also record the built-in `kick`, set `"recordKicks": true` in `config.json`. A kick never blocks anyone.
+
 ## Good to know
 
-- Players with a **BeamMP guest** session have no account id, so they cannot be checked. They are let in and nothing is sent.
+- Players with a **BeamMP guest** session have no account id, so they cannot be checked or banned. They are let in and nothing is sent.
 - BeamMP cannot read a hardware id, so matching uses the account id and IP address.
 - The notice is shown in chat after the player joins, so a blocked player is removed a moment after joining.
 - If ServerGuardian cannot be reached, the plugin applies your fail mode (default: let players in).
