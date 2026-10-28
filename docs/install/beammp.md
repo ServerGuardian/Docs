@@ -27,7 +27,7 @@ To also record the built-in `kick`, set `"recordKicks": true` in `config.json`. 
 
 ## Good to know
 
-- Players with a **BeamMP guest** session have no account id, so they cannot be checked or banned. They are let in and nothing is sent.
+- Players with a **BeamMP guest** session have no account id, so they cannot be checked or banned. They are let in and nothing is sent. Because of that, guests are a way around any ban. To refuse them, set `AllowGuests = false` under `[General]` in your server's `ServerConfig.toml` (or set the environment variable `BEAMMP_ALLOW_GUESTS=false`). That is BeamMP's own setting, so whether to use it is up to you.
 - BeamMP cannot read a hardware id, so matching uses the account id and IP address.
 - The notice is shown in chat after the player joins, so a blocked player is removed a moment after joining.
 - If ServerGuardian cannot be reached, the plugin applies your fail mode (default: let players in).
