@@ -41,13 +41,13 @@ Every delivery is an HTTPS `POST` with a JSON body:
 | ---------------- | ------------------------------------------------------------------------------------------------------ |
 | `player.join`    | `reference`, `occurredAt`, `checked`, and `result` (`pass` or `block`) when `checked` is true          |
 | `player.leave`   | `reference`, `occurredAt`                                                                              |
-| `action.created` | `id`, `reference`, `type` (`ban`, `warn`, `kick`, `mute`), `reason`, `expiresAt` (or `null`)           |
+| `action.created` | `id`, `reference`, `type` (`ban`, `warn`, `kick`, `mute`), `expiresAt` (or `null`)                     |
 | `action.lifted`  | `id`, `reference`                                                                                      |
 | `appeal.created` | `id`, `actionId`, `reference`                                                                          |
 | `appeal.decided` | `id`, `actionId`, `reference`, `outcome` (`overturned`, `upheld`, `withdrawn`, `rejected_by_operator`) |
 | `report.created` | `id`, `reference`, `category`, `hasNote`                                                               |
 
-`reference` is the id **your own plugin** gave the join, action or report, so you can match it to what your server knows. That is how you recognise the player: **a delivery never contains a game account id, an IP address or a hardware id.** It also never says why a join was blocked (you only get the same `pass` or `block` the plugin gets), never contains an appeal statement, and never contains the note of a report. The `reason` of an action is the one you wrote.
+`reference` is the id **your own plugin** gave the join, action or report, so you can match it to what your server knows. That is how you recognise the player: **a delivery never contains a game account id, an IP address or a hardware id.** It also never says why a join was blocked (you only get the same `pass` or `block` the plugin gets), never contains an appeal statement, and never contains the note of a report. The reason you wrote for an action is not sent either: you already have it, so look it up by `id`.
 
 ## Verify every delivery
 

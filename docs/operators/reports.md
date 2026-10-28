@@ -24,7 +24,7 @@ Sent: the category, the optional note, and the game account ids of the player ma
 
 ## What you see
 
-Under **Reports** in the portal you see each report with its reference, category, note, the server and when it was made, plus two counts: **how many reports** you have had about the same player and **how many actions** you have already recorded against them. **You never see who the player is.** The reference comes from the plugin, so your staff can recognise it, for example by the time.
+Under **Reports** in the portal you see each report with its reference, category, note, the server and when it was made, plus two counts: **how many reports** you have had about the same player and **how many actions** you have already recorded against them. **You never see who the player is.** The reference comes from the plugin so your staff can recognise it: the three plugins build it from the time and the reported player's in-game name (letters and digits only), which your server already knows. That name is the one place a name is stored, and it is kept only as long as the report.
 
 For each open report an owner can:
 
