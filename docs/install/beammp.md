@@ -25,6 +25,10 @@ A recorded ban applies to all of your servers. The player is told only a fixed m
 
 To also record the built-in `kick`, set `"recordKicks": true` in `config.json`. A kick never blocks anyone.
 
+## Player reports
+
+Once you switch on [player reports](/operators/reports) for the server in the portal, players can type `/report <player> <category> [note]` in chat. The first use shows a notice and asks them to repeat the command to confirm. Nothing but the category, an optional short note and the account ids of the two players is sent.
+
 ## Good to know
 
 - Players with a **BeamMP guest** session have no account id, so they cannot be checked or banned. They are let in and nothing is sent. Because of that, guests are a way around any ban. To refuse them, set `AllowGuests = false` under `[General]` in your server's `ServerConfig.toml` (or set the environment variable `BEAMMP_ALLOW_GUESTS=false`). That is BeamMP's own setting, so whether to use it is up to you.

@@ -20,6 +20,10 @@ Bans that already exist the first time the plugin runs are not imported. A ban c
 
 **The reason you give a ban is shown to the player in their portal**, so keep it factual. Set `record-kicks: true` in `config.yml` to record `/kick` as well; a kick never blocks anyone. Set `record-bans: false` to record nothing.
 
+## Player reports
+
+Once you switch on [player reports](/operators/reports) for the server in the portal, players can type `/report <player> <category> [note]`. The first use shows a notice and asks them to repeat the command to confirm. Nothing but the category, an optional short note and the account ids of the two players is sent.
+
 ## Good to know
 
 - A Minecraft server cannot read a hardware id, so none is collected and no hardware prompt is shown. Matching uses the player's UUID and IP address.

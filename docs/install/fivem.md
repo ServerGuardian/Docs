@@ -25,6 +25,10 @@ FiveM has no ban system of its own, so ServerGuardian only knows about bans you 
 
 **The reason you type in txAdmin is shown to the player in their portal**, so keep it factual. Only bans against a player with a Cfx.re licence or Steam id can be recorded. Bans made another way are not seen.
 
+## Player reports
+
+Once you switch on [player reports](/operators/reports) for the server in the portal, players can type `/report <player> <category> [note]`. The first use shows a notice and asks them to repeat the command to confirm. Nothing but the category, an optional short note and the account ids of the two players is sent.
+
 ## Good to know
 
 - A joining player is held on the connection card, which shows the ServerGuardian notice before anything is sent. This is the one platform where the notice comes **before** the player is in.

@@ -16,7 +16,11 @@ export default defineConfig({
     logo: "/logo.svg",
     siteTitle: "ServerGuardian Docs",
     nav: [
-      { text: "Server owners", link: "/guide/getting-started", activeMatch: "/guide/|/install/" },
+      {
+        text: "Server owners",
+        link: "/guide/getting-started",
+        activeMatch: "/guide/|/install/|/operators/",
+      },
       { text: "Players", link: "/players/", activeMatch: "/players/" },
       { text: "Hosting companies", link: "/partners/", activeMatch: "/partners/" },
     ],
@@ -27,6 +31,14 @@ export default defineConfig({
           { text: "How it works", link: "/guide/how-it-works" },
           { text: "Getting started", link: "/guide/getting-started" },
           { text: "Rules", link: "/guide/rules" },
+        ],
+      },
+      {
+        text: "Tools for your servers",
+        items: [
+          { text: "Ban list", link: "/operators/ban-list" },
+          { text: "Player reports", link: "/operators/reports" },
+          { text: "Webhooks", link: "/operators/webhooks" },
         ],
       },
       {
