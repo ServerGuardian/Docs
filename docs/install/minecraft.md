@@ -1,7 +1,7 @@
 # Minecraft (Paper)
 
-::: warning Built, not yet tested
-The plugin compiles, but it has no tests and has not run on a real Paper server.
+::: warning Not yet tried on a live server
+The plugin compiles and has unit tests for its plain logic, but it has not run on a real Paper server.
 :::
 
 The plugin is in the [Minecraft_Plugin](https://github.com/ServerGuardian/Minecraft_Plugin) repository. It needs JDK 21 to build.
@@ -11,6 +11,14 @@ The plugin is in the [Minecraft_Plugin](https://github.com/ServerGuardian/Minecr
 1. Build the plugin with `gradle build`. The jar is in `build/libs/`.
 2. Copy the jar into the server's `plugins/` folder, and start the server once.
 3. Edit `plugins/ServerGuardian/config.yml` (your API key and address), then restart.
+
+## Recording bans
+
+ServerGuardian can only match players against bans it has been told about. Paper has no ban event, so the plugin reads the server's ban list every 30 seconds. A new ban (vanilla `/ban`, or any plugin that uses the server's ban list) is recorded, with its length if it is temporary, and then applies to all of your servers. A `/pardon` ends it in ServerGuardian too. Use `/ban` and `/pardon` as usual; there are no ServerGuardian commands to learn.
+
+Bans that already exist the first time the plugin runs are not imported. A ban can reach ServerGuardian up to 30 seconds late. IP bans, and bans kept in a plugin's own database (for example LiteBans or AdvancedBan), are not seen.
+
+**The reason you give a ban is shown to the player in their portal**, so keep it factual. Set `record-kicks: true` in `config.yml` to record `/kick` as well; a kick never blocks anyone. Set `record-bans: false` to record nothing.
 
 ## Good to know
 

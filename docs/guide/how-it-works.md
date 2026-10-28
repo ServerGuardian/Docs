@@ -24,6 +24,10 @@ You choose the [rules](/guide/rules). In short, you can turn away:
 
 Sharing a computer or network can cause mistakes, for example a family PC or a school. That is why every player can [appeal](/players/), and why a ban from a single other server owner is weighed less than bans from several.
 
+## Who can be trusted
+
+Server owners are the source of what ServerGuardian knows, and anyone can sign up, so what an owner reports is trusted in steps. An owner has to confirm their email address before they can create a key. Bans recorded by a new owner protect that owner's own servers straight away, and only start to count towards other owners' servers after a settling-in period. This stops a handful of new accounts from getting a stranger blocked.
+
 ## If ServerGuardian is down
 
 By default the plugin **lets players in** when it cannot reach ServerGuardian, because a moderation tool must not stop your server accepting players. You can choose to keep players out instead. When a service limit is reached on our side (your plan, or too many requests), players are always let in.
