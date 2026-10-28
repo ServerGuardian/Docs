@@ -18,6 +18,7 @@ export default defineConfig({
     nav: [
       { text: "Server owners", link: "/guide/getting-started", activeMatch: "/guide/|/install/" },
       { text: "Players", link: "/players/", activeMatch: "/players/" },
+      { text: "Hosting companies", link: "/partners/", activeMatch: "/partners/" },
     ],
     sidebar: [
       {
@@ -34,6 +35,13 @@ export default defineConfig({
           { text: "BeamMP", link: "/install/beammp" },
           { text: "FiveM", link: "/install/fivem" },
           { text: "Minecraft (Paper)", link: "/install/minecraft" },
+        ],
+      },
+      {
+        text: "For hosting companies",
+        items: [
+          { text: "Selling ServerGuardian", link: "/partners/" },
+          { text: "The partner API", link: "/partners/api" },
         ],
       },
       {
