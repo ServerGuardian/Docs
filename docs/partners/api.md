@@ -22,17 +22,18 @@ Every error has the same shape and a short code. The text is for programmers, no
 { "error": "email_in_use" }
 ```
 
-| Status | Code                    | Meaning                                                                               |
-| ------ | ----------------------- | ------------------------------------------------------------------------------------- |
-| 422    | `invalid_request`       | A field is missing or not valid. `fields` names which, never the values               |
-| 401    | `unauthorized`          | The key is missing, wrong, revoked or expired                                         |
-| 403    | `partner_suspended`     | Your partner account is suspended. Existing customers stay covered and billed         |
-| 404    | `not_found`             | No such customer or invoice for you                                                   |
-| 409    | `email_in_use`          | That address already has a ServerGuardian account                                     |
-| 409    | `external_ref_conflict` | That reference exists with a different email address                                  |
-| 409    | `invalid_state`         | The action does not fit the customer's state, for example ending cover that has ended |
-| 429    | `daily_limit`           | You reached your daily limit for new customers                                        |
-| 429    | `rate_limited`          | Too many requests. Wait for `retry-after`                                             |
+| Status | Code                    | Meaning                                                                                                                                                                                |
+| ------ | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 422    | `invalid_request`       | A field is missing or not valid. `fields` names which, never the values                                                                                                                |
+| 401    | `unauthorized`          | The key is missing, wrong, revoked or expired                                                                                                                                          |
+| 403    | `partner_suspended`     | Your partner account is suspended. Existing customers stay covered and billed                                                                                                          |
+| 404    | `not_found`             | No such customer or invoice for you                                                                                                                                                    |
+| 409    | `email_in_use`          | That address already has a ServerGuardian account. Repeated attempts of this kind from one key are limited (`429 rate_limited`), because the answer says which addresses have accounts |
+| 409    | `external_ref_conflict` | That reference exists with a different email address                                                                                                                                   |
+| 409    | `invalid_state`         | The action does not fit the customer's state, for example ending cover that has ended                                                                                                  |
+| 429    | `daily_limit`           | You reached your daily limit for new customers                                                                                                                                         |
+| 429    | `invite_too_soon`       | That customer was invited less than an hour ago. An invitation is sent at most once an hour per customer, including when cover is restarted                                            |
+| 429    | `rate_limited`          | Too many requests. Wait for `retry-after`                                                                                                                                              |
 
 ## Customers
 
@@ -71,7 +72,7 @@ Answers `201` with the customer, `"created": true` and `inviteExpiresAt`. **Crea
 
 ### Send the invitation again
 
-`POST /v1/partner/customers/{id}/resend-invite` answers `202` with a new `inviteExpiresAt`. It only works while the customer has not accepted. Earlier links stop working.
+`POST /v1/partner/customers/{id}/resend-invite` answers `202` with a new `inviteExpiresAt`. It only works while the customer has not accepted, at most once an hour per customer, and not while your partner account is suspended. Earlier links stop working.
 
 ### End and restart cover
 
