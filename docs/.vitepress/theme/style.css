@@ -1,0 +1,66 @@
+/*
+ * Maps the ServerGuardian brand tokens (brand.css, the same ones the web apps use) onto VitePress's
+ * variables. Change colours in brand.css, never here: this file only points one set of names at the
+ * other. The dark theme is VitePress's `.dark` class, which is the class brand.css already uses.
+ */
+
+:root {
+  --vp-font-family-base: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --vp-font-family-mono: "JetBrains Mono Variable", ui-monospace, "SFMono-Regular", monospace;
+
+  --vp-c-bg: var(--background);
+  --vp-c-bg-alt: var(--sidebar);
+  --vp-c-bg-elv: var(--card);
+  --vp-c-bg-soft: var(--muted);
+
+  --vp-c-text-1: var(--foreground);
+  --vp-c-text-2: var(--muted-foreground);
+  --vp-c-text-3: var(--muted-foreground);
+
+  --vp-c-divider: var(--border);
+  --vp-c-border: var(--border);
+  --vp-c-gutter: var(--border);
+
+  --vp-c-brand-1: var(--primary);
+  --vp-c-brand-2: var(--ring);
+  --vp-c-brand-3: var(--primary);
+  --vp-c-brand-soft: var(--accent);
+
+  --vp-button-brand-bg: var(--primary);
+  --vp-button-brand-text: var(--primary-foreground);
+  --vp-button-brand-hover-bg: var(--ring);
+  --vp-button-brand-hover-text: var(--primary-foreground);
+  --vp-button-brand-active-bg: var(--ring);
+  --vp-button-brand-active-text: var(--primary-foreground);
+
+  --vp-c-tip-1: var(--success);
+  --vp-c-tip-soft: var(--success-soft);
+  --vp-c-warning-1: var(--warning);
+  --vp-c-warning-soft: var(--warning-soft);
+  --vp-c-danger-1: var(--destructive);
+  --vp-c-danger-soft: var(--secondary);
+  --vp-custom-block-info-bg: var(--info-soft);
+  --vp-custom-block-info-border: var(--info);
+
+  --vp-code-block-bg: var(--card);
+  --vp-code-bg: var(--muted);
+  --vp-code-color: var(--foreground);
+
+  --vp-home-hero-name-color: var(--primary);
+  --vp-sidebar-bg-color: var(--sidebar);
+}
+
+/* Focus must stay visible (WCAG 2.4.7). */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.vp-doc h1,
+.vp-doc h2 {
+  letter-spacing: -0.01em;
+}
+
+.VPNavBarTitle .logo {
+  color: var(--primary);
+}
