@@ -19,6 +19,12 @@ ensure serverguardian
 
 Use `set`, not `setr`: a replicated variable would be sent to every player. Other options (fail mode, timeout, the optional hardware check) are in `config.lua`.
 
+## Recording bans
+
+FiveM has no ban system of its own, so ServerGuardian only knows about bans you make with **txAdmin**. With `recordBans` on (the default in `config.lua`), a txAdmin ban is also recorded in ServerGuardian, with its length, and then applies to all of your servers. If you revoke the ban in txAdmin, it ends in ServerGuardian too. Set `recordKicks = true` to record txAdmin kicks as well; a kick never blocks anyone.
+
+**The reason you type in txAdmin is shown to the player in their portal**, so keep it factual. Only bans against a player with a Cfx.re licence or Steam id can be recorded. Bans made another way are not seen.
+
 ## Good to know
 
 - A joining player is held on the connection card, which shows the ServerGuardian notice before anything is sent. This is the one platform where the notice comes **before** the player is in.
