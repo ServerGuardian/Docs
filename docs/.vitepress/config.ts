@@ -38,6 +38,7 @@ export default defineConfig({
         items: [
           { text: "Ban list", link: "/operators/ban-list" },
           { text: "Player reports", link: "/operators/reports" },
+          { text: "Game events", link: "/operators/game-events" },
           { text: "Webhooks", link: "/operators/webhooks" },
         ],
       },

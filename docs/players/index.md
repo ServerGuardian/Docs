@@ -16,6 +16,7 @@ You sign in with the game account you play on. You enter your password on that p
 - **Bans and warnings:** actions that servers recorded about you, with the reason the server gave.
 - **Blocks:** when you were turned away, and why, in plain words.
 - **Reports:** if a server lets players report each other in game, any report you made (with its note) and any that names you (its category, status and dates, but not the reporter's note), and how long they are kept.
+- **Game events:** if a server uses them, what its plugin saw you spawn or flagged (item or kind of check, with the label and when), and how long it is kept.
 - **Privacy and data:** download everything we hold about you as a file, delete it (needs a sign-in within the last ten minutes), and switch the optional hardware check on or off.
 
 ## If you were blocked or banned unfairly
@@ -27,6 +28,10 @@ Shared computers, schools and family PCs can look like ban evasion, and that is 
 ## Reports
 
 On servers that turn it on, players can report each other with a command in game. A report is a category and an optional short note of up to 200 characters. It goes to **that one server owner**, who sees the report but not who you are. It is kept for 90 days (30 if you are handled as a likely minor), never used to decide whether you are blocked, never shown to any other server owner, and deleted if you ask us to erase your data. The report's reference includes the in-game name of the player reported, so that server's staff can recognise it. A server owner may then act on it, for example with a ban, which you can appeal like any other.
+
+## Game events
+
+On servers that turn it on, the server's plugin can tell ServerGuardian what you spawn, and when its own movement checks looked wrong (a very fast move, a jump that looked like a teleport, a sudden change of speed). It sends only the item name or the kind of check and a label (usually your in-game name), never where you were or what you said. The server owner sees it, on a plan that keeps history, for a few days; it is never kept for players handled as likely minors, never used to decide whether you are blocked, never shown to any other server owner, and deleted if you ask us to erase your data. A flag is only a prompt for the owner to look: nothing is done to you because of it.
 
 ## What we do not collect
 
