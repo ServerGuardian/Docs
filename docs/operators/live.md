@@ -1,6 +1,6 @@
 # The live view
 
-**Live** in the portal shows, as it happens, whether each of your servers is online and what is going on: players joining and being let in or turned away, bans and reports, and any game events. It needs nothing switched on, only the updated plugin.
+**Live** in the portal shows, as it happens, whether each of your servers is online and what is going on: players joining and being let in or turned away, bans and reports, and any game events (something spawned, changed or removed, or a movement flag). It needs nothing switched on, only the updated plugin.
 
 ## Online or offline
 
@@ -14,7 +14,7 @@ The plugin says it is there about **once a minute**, and every call it makes cou
 
 ## Events as they come in
 
-Under the server cards, a feed shows new events as they arrive: a player joined and was let in or turned away, a ban or kick was recorded or lifted, an appeal came in or was decided, a player reported someone, the plugin flagged some movement, a vehicle was spawned, a server went online or offline.
+Under the server cards, a feed shows new events as they arrive: a player joined and was let in or turned away, a ban or kick was recorded or lifted, an appeal came in or was decided, a player reported someone, the plugin flagged some movement, a player spawned, changed or removed a vehicle, a server went online or offline.
 
 - It is the **same stream of events your [webhooks](/operators/webhooks) get**: your own references and the plain facts, never a game account id, an address, why a join was blocked, or what a player wrote.
 - Nothing is stored for the live view. It shows what happens while you have the page open, and a refresh starts from now.

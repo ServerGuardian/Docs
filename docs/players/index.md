@@ -16,7 +16,7 @@ You sign in with the game account you play on. You enter your password on that p
 - **Bans and warnings:** actions that servers recorded about you, with the reason the server gave.
 - **Blocks:** when you were turned away, and why, in plain words.
 - **Reports:** if a server lets players report each other in game, any report you made (with its note) and any that names you (its category, status and dates, but not the reporter's note), and how long they are kept.
-- **Game events:** if a server uses them, what its plugin saw you spawn or flagged (item or kind of check, with the label and when), and how long it is kept.
+- **Game events:** if a server uses them, what its plugin saw you spawn, change or remove, or flagged (item or kind of check, with the label and when), and how long it is kept.
 - **Privacy and data:** download everything we hold about you as a file, delete it (needs a sign-in within the last ten minutes), and switch the optional hardware check on or off.
 
 ## If you were blocked or banned unfairly
@@ -31,7 +31,7 @@ On servers that turn it on, players can report each other with a command in game
 
 ## Game events
 
-On servers that turn it on, the server's plugin can tell ServerGuardian what you spawn, and when its own movement checks looked wrong (a very fast move, a jump that looked like a teleport, a sudden change of speed). It sends only the item name or the kind of check and a label (usually your in-game name), never where you were or what you said. The server owner sees it, on a plan that keeps history, for a few days; nothing is kept or passed on for players handled as likely minors, never used to decide whether you are blocked, never shown to any other server owner, and deleted if you ask us to erase your data. A flag is only a prompt for the owner to look: nothing is done to you because of it.
+On servers that turn it on, the server's plugin can tell ServerGuardian when you spawn, change or remove something, and when its own movement checks looked wrong (a very fast move, a jump that looked like a teleport, a sudden change of speed). It sends only the item name or the kind of check and a label (usually your in-game name), never where you were or what you said. The server owner sees it, on a plan that keeps history, for a few days; nothing is kept or passed on for players handled as likely minors, never used to decide whether you are blocked, never shown to any other server owner, and deleted if you ask us to erase your data. A flag is only a prompt for the owner to look: nothing is done to you because of it.
 
 ## What we do not collect
 

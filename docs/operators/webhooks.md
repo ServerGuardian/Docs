@@ -14,6 +14,8 @@ A webhook sends an event to an address you choose, for example a Discord relay o
 | `appeal.decided` | An appeal ended, or you or staff answered it.                                             |
 | `report.created` | A player reported another in game.                                                        |
 | `game.spawn`     | The plugin saw a player spawn something ([game events](/operators/game-events)).          |
+| `game.edit`      | The plugin saw a player change something they had spawned.                                |
+| `game.remove`    | The plugin saw a player remove something.                                                 |
 | `game.flag`      | One of the plugin's movement checks looked wrong ([game events](/operators/game-events)). |
 
 Each endpoint chooses the events it wants and, optionally, a single server. There is also a `ping` event, sent only when you press **Send test**.
@@ -49,9 +51,11 @@ Every delivery is an HTTPS `POST` with a JSON body:
 | `appeal.decided` | `id`, `actionId`, `reference`, `outcome` (`overturned`, `upheld`, `withdrawn`, `rejected_by_operator`) |
 | `report.created` | `id`, `reference`, `category`, `hasNote`                                                               |
 | `game.spawn`     | `reference`, `playerReference` (the join), `occurredAt`, `item`                                        |
+| `game.edit`      | `reference`, `playerReference`, `occurredAt`, `item`                                                   |
+| `game.remove`    | `reference`, `playerReference`, `occurredAt`, `item`                                                   |
 | `game.flag`      | `reference`, `playerReference`, `occurredAt`, `check`, `severity`                                      |
 
-`reference` is the id **your own plugin** gave the join, action or report, so you can match it to what your server knows. That is how you recognise the player: **a delivery never contains a game account id, an IP address or a hardware id.** It also never says why a join was blocked (you only get the same `pass` or `block` the plugin gets), never contains an appeal statement, and never contains the note of a report. The reason you wrote for an action is not sent either: you already have it, so look it up by `id`.
+`item` is the name of the vehicle or item, and a game event carries no positions or chat. `reference` is the id **your own plugin** gave the join, action or report, so you can match it to what your server knows. That is how you recognise the player: **a delivery never contains a game account id, an IP address or a hardware id.** It also never says why a join was blocked (you only get the same `pass` or `block` the plugin gets), never contains an appeal statement, and never contains the note of a report. The reason you wrote for an action is not sent either: you already have it, so look it up by `id`.
 
 ## Verify every delivery
 

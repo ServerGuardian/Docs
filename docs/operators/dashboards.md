@@ -27,7 +27,7 @@ Some panels are shown greyed out, with a lock, on plans that do not include them
 - **Different players**, and the **peak number of players** at once, per hour or per day.
 - **Uptime**, from the plugin's once-a-minute heartbeat: a percentage, and a strip showing when the server was up (per server), or a bar for each server (account).
 - **Activity by hour of the week** (per server, for 7 days or longer): a heat map of when players join, to plan staffing and restarts.
-- **Breakdowns:** actions by type, reports and game events, and your busiest servers.
+- **Breakdowns:** actions by type, reports and game events (spawns, edits, removals and flags together), and your busiest servers.
 
 ## Good to know
 

@@ -31,7 +31,7 @@ Once you switch on [player reports](/operators/reports) for the server in the po
 
 ## Settings
 
-How this server behaves is set in the plugin's config file, next to the API key, not in the portal. In `config.json`, in the `settings` object: `failMode`, `gameEvents`, `reports`, `shareBans` and `youthOriented`. Each setting, its default and what it does are on the [server settings](/guide/settings) page. Settings you leave out keep the value the server already had, so updating the plugin never resets them.
+How this server behaves is set in the plugin's config file, next to the API key, not in the portal. In `config.json`, in the `settings` object: `failMode`, `gameEvents`, `reports`, `shareBans` and `youthOriented`. `gameEvents` makes the plugin send when a player spawns, changes or removes a vehicle, and its movement flags, never chat or positions. Each setting, its default and what it does are on the [server settings](/guide/settings) page. Settings you leave out keep the value the server already had, so updating the plugin never resets them.
 
 ## Good to know
 
