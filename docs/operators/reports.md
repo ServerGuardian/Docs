@@ -31,6 +31,8 @@ For each open report an owner can:
 - **Dismiss** it, or
 - **Take action**: ban, warn, kick or mute the player the report names, with a reason and (for a ban or mute) an optional length. The action is recorded exactly like one made in game, so a ban applies to your other servers too, and it appears in the ban list.
 
+The **Player reports** link in the menu shows how many reports are waiting across the servers you handle, so you can see at a glance without opening the page.
+
 ## Being told about new reports
 
 When new reports arrive, ServerGuardian emails your team so they do not have to keep checking the portal.
