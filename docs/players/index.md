@@ -31,7 +31,7 @@ On servers that turn it on, players can report each other with a command in game
 
 ## Game events
 
-On servers that turn it on, the server's plugin can tell ServerGuardian what you spawn, and when its own movement checks looked wrong (a very fast move, a jump that looked like a teleport, a sudden change of speed). It sends only the item name or the kind of check and a label (usually your in-game name), never where you were or what you said. The server owner sees it, on a plan that keeps history, for a few days; it is never kept for players handled as likely minors, never used to decide whether you are blocked, never shown to any other server owner, and deleted if you ask us to erase your data. A flag is only a prompt for the owner to look: nothing is done to you because of it.
+On servers that turn it on, the server's plugin can tell ServerGuardian what you spawn, and when its own movement checks looked wrong (a very fast move, a jump that looked like a teleport, a sudden change of speed). It sends only the item name or the kind of check and a label (usually your in-game name), never where you were or what you said. The server owner sees it, on a plan that keeps history, for a few days; nothing is kept or passed on for players handled as likely minors, never used to decide whether you are blocked, never shown to any other server owner, and deleted if you ask us to erase your data. A flag is only a prompt for the owner to look: nothing is done to you because of it.
 
 ## What we do not collect
 

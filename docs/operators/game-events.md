@@ -22,7 +22,7 @@ Every event names the join the plugin already reported for that player, so it be
 
 - Always passed to your webhooks, as soon as they happen.
 - Kept in the portal only on plans that keep event history. How many days is shown at the top of the page. A plan with none keeps nothing, and the page stays empty.
-- Never kept for a player handled as a likely minor, or on a [youth-oriented](/guide/getting-started) server (webhooks still get them).
+- **Nothing at all** (not kept, and not sent to webhooks) for a player handled as a likely minor, or on a [youth-oriented](/guide/getting-started) server, or for a player who has asked us to erase their data.
 - Deleted when a player asks us to erase their data, and included in the download of their data.
 
 A webhook for an event carries the plugin's references (the id of the event and of the join) and the item or kind of check, never the label.
