@@ -66,6 +66,8 @@ Customer fields:
 
 `servers` is optional (up to 5; `platform` is `beammp`, `fivem` or `minecraft`). `plan` is optional and is `pro` unless you say `business`, which works only if your agreement has a Business price (otherwise `422 plan_not_offered`). The customer still creates their API keys and rules themselves.
 
+If the customer already exists, the answer is the customer as it is now, including its current `plan`; use the plan call below to change it.
+
 Answers `201` with the customer, `"created": true` and `inviteExpiresAt`. **Creating the same `externalRef` again with the same email is safe**: it answers `200` with `"created": false` and sends nothing. With a different email it is a `409 external_ref_conflict`.
 
 ### Look a customer up
@@ -81,12 +83,12 @@ Answers `201` with the customer, `"created": true` and `inviteExpiresAt`. **Crea
 
 `POST /v1/partner/customers/{id}/plan` with `{ "plan": "business" }` or `{ "plan": "pro" }` moves the customer to that plan **from now** and returns the customer. It works for an upgrade and a downgrade. Asking for the plan they are already on changes nothing. It is refused for a customer whose cover has ended (`409 invalid_state`) and for a plan your agreement does not include (`422 plan_not_offered`). A customer who has not accepted yet starts on the new plan.
 
-A downgrade can leave the customer with more servers than the lower plan allows. The newest are paused, as for any plan that gets smaller, and the customer is told.
+A downgrade is billed from the next day, but the customer's plan changes at once. It can leave the customer with more servers than the lower plan allows. The newest are paused, as for any plan that gets smaller, and the customer is told.
 
 ### End and restart cover
 
 - `POST /v1/partner/customers/{id}/end` stops your cover from now. The customer keeps their account on the Free plan and is emailed. Billing for them stops from that moment.
-- `POST /v1/partner/customers/{id}/reactivate` starts cover again, if the customer's account still exists, on the plan they were last on. It is billed from now.
+- `POST /v1/partner/customers/{id}/reactivate` starts cover again, if the customer's account still exists, on the plan they were last on (or on Pro, if your agreement no longer has a Business price). It is billed from now.
 
 Both return the customer.
 
@@ -114,7 +116,7 @@ Amounts are in the smallest unit of the currency (pence, cents). `accruedMinor` 
 
 ## Invoices
 
-We invoice each month, per customer, for the days the customer was covered: the monthly price times days covered over days in the month, rounded per customer. A day counts once if cover held at any point in it, and at one plan: the plan of the stretch of cover that began last that day. So on the day a customer is upgraded the whole day is charged at the new plan, and on the day they are downgraded the whole day is charged at the lower one. A customer who was on two plans in a month has a line for each.
+We invoice each month, per customer, for the days the customer was covered: the monthly price times days covered over days in the month, rounded per customer. A day counts once if cover held at any point in it, and at one plan: the highest plan the customer held at any moment of that day. So on the day a customer is upgraded the whole day is charged at the new plan, and a downgrade takes effect from the next day. A customer who was on two plans in a month has a line for each.
 
 - `GET /v1/partner/invoices` lists invoices that have been issued.
 - `GET /v1/partner/invoices/{id}` returns one with a line for each customer and plan (your reference, plan, days covered, amount).
