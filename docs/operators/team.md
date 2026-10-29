@@ -24,9 +24,9 @@ Anyone who helps run your servers can have their own sign-in, with only what the
 
 1. Under **Team**, choose **Invite**, enter their email address, a role and, for a moderator or viewer, which servers.
 2. They get an email with a link, good for 14 days. It lets them **choose a password**, and confirms their address. You can send it again after an hour.
-3. They sign in and see only what their role allows. Until they follow the link they cannot sign in, but they do take up a place on your team.
+3. They sign in and see only what their role allows. Until they follow the link they cannot sign in, but they do take up a place on your team. An invitation nobody follows for 14 days lapses, and frees the place.
 
-An address that already has a ServerGuardian account (anywhere) cannot be invited: ask them to use another address. A person you removed can be invited again.
+One address can belong to only one team. If you invite an address that already has a ServerGuardian account, you get the same answer as for any address, and that person is emailed to say someone tried (nothing changes, and they take no place on your team): if they do not show up as invited, ask them to use another address. This keeps invitations from being used to find out who has an account. A person you removed can be invited again.
 
 ## Changing and removing
 
@@ -45,5 +45,5 @@ How many people a team can hold depends on your plan; the Team page shows yours.
 ## Keep it safe
 
 - Give people the **least** they need. A moderator rarely needs more than a moderator.
-- **Turn on two-step sign-in** for owners and admins, who can create keys and change rules.
+- **Turn on two-step sign-in** for owners and admins, who can create keys and change rules. Inviting, changing and removing people asks for it too, as creating a key does.
 - Every change to the team (an invitation, a new role, a removal) is recorded in ServerGuardian's audit log.
