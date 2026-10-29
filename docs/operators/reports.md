@@ -31,6 +31,15 @@ For each open report an owner can:
 - **Dismiss** it, or
 - **Take action**: ban, warn, kick or mute the player the report names, with a reason and (for a ban or mute) an optional length. The action is recorded exactly like one made in game, so a ban applies to your other servers too, and it appears in the ban list.
 
+## Being told about new reports
+
+When new reports arrive, ServerGuardian emails your team so they do not have to keep checking the portal.
+
+- **Who:** your owners, your admins, and the moderators who may work on the server the report came from (once they have confirmed their address). Someone limited to some servers hears only about those.
+- **What:** how many reports are waiting on each of your servers, and a link to the reports page. It never says who was reported, who reported, or what was written.
+- **How often:** new reports are held for about 15 minutes so a burst is one email, and your team is emailed **at most once an hour**. Reports that arrive in between are included in the next email, not lost. A report you dismiss or act on before the email goes out is not counted.
+- **Turning it off:** each person can switch it off for themselves under **Account**, **Email notifications**. It is on by default for everyone who handles reports.
+
 ## How reports are handled
 
 - A report belongs to **one server owner**: the owner of the server it came from. No other owner can see it.
