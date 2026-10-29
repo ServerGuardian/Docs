@@ -38,6 +38,12 @@ One address can belong to only one team. If you invite an address that already h
 
 When a player appeals, the email goes to your owners, your admins and the moderators who may work on that server. Any of them who may answer can; the first answer is the one that counts.
 
+## Seeing what the team did
+
+Owners and admins can open **Activity** to see who did what: invitations and changes to the team, servers added or changed, join rules edited, API keys made or revoked, bans added by hand, actions lifted, reports and appeals handled, webhooks, and two-step sign-in being turned on or off. Each line says who, when and what, newest first, and marks someone who has since left the team.
+
+It shows **people on your team and your own servers**, never a player: no player id or name, no reason someone typed, no key. It does not show what ServerGuardian staff did on your account. Moderators and viewers cannot see this page.
+
 ## Limits
 
 How many people a team can hold depends on your plan; the Team page shows yours. Pending invitations count. You can send a limited number of new invitations an hour. These are first guesses and may change.
@@ -46,4 +52,4 @@ How many people a team can hold depends on your plan; the Team page shows yours.
 
 - Give people the **least** they need. A moderator rarely needs more than a moderator.
 - **Turn on two-step sign-in** for owners and admins, who can create keys and change rules. Inviting, changing and removing people asks for it too, as creating a key does.
-- Every change to the team (an invitation, a new role, a removal) is recorded in ServerGuardian's audit log.
+- Every change to the team (an invitation, a new role, a removal) is recorded in ServerGuardian's audit log, and shows on the Activity page.
