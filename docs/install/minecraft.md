@@ -24,6 +24,10 @@ Bans that already exist the first time the plugin runs are not imported. A ban c
 
 Once you switch on [player reports](/operators/reports) for the server in the portal, players can type `/report <player> <category> [note]`. The first use shows a notice and asks them to repeat the command to confirm. Nothing but the category, an optional short note and the account ids of the two players is sent.
 
+## Settings
+
+How this server behaves is set in the plugin's config file, next to the API key, not in the portal. In `config.yml`, under `settings:`: `fail-mode`, `game-events`, `reports`, `share-bans` and `youth-oriented`. Each setting, its default and what it does are on the [server settings](/guide/settings) page. Settings you leave out keep the value the server already had, so updating the plugin never resets them.
+
 ## Good to know
 
 - A Minecraft server cannot read a hardware id, so none is collected and no hardware prompt is shown. Matching uses the player's UUID and IP address.

@@ -29,6 +29,10 @@ FiveM has no ban system of its own, so ServerGuardian only knows about bans you 
 
 Once you switch on [player reports](/operators/reports) for the server in the portal, players can type `/report <player> <category> [note]`. The first use shows a notice and asks them to repeat the command to confirm. Nothing but the category, an optional short note and the account ids of the two players is sent.
 
+## Settings
+
+How this server behaves is set in the plugin's config file, next to the API key, not in the portal. In `config.lua` (`Config.settings`), or as convars in `server.cfg` (`serverguardian_fail_mode`, `serverguardian_game_events`, `serverguardian_reports`, `serverguardian_share_bans`, `serverguardian_youth_oriented`; a convar wins). Each setting, its default and what it does are on the [server settings](/guide/settings) page. Settings you leave out keep the value the server already had, so updating the plugin never resets them.
+
 ## Good to know
 
 - A joining player is held on the connection card, which shows the ServerGuardian notice before anything is sent. This is the one platform where the notice comes **before** the player is in.

@@ -30,6 +30,7 @@ export default defineConfig({
         items: [
           { text: "How it works", link: "/guide/how-it-works" },
           { text: "Getting started", link: "/guide/getting-started" },
+          { text: "Server settings", link: "/guide/settings" },
           { text: "Rules", link: "/guide/rules" },
         ],
       },

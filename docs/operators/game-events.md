@@ -3,7 +3,7 @@
 The plugin can tell ServerGuardian what your players **spawn**, and when its own **movement checks** look wrong. You see them in the portal under **Game events**, and can have them sent to a [webhook](/operators/webhooks) (for example into a Discord channel your staff watch).
 
 ::: warning Needs the updated plugin, and is off until you turn it on
-Switch on **Let the plugin send game events** in the server's settings. Until then the plugin sends nothing and runs no checks.
+Set `gameEvents` to on in the plugin's [config file](/guide/settings). Until then the plugin sends nothing and runs no checks.
 :::
 
 ## What it is, and what it is not

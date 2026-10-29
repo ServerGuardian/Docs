@@ -30,4 +30,4 @@ Server owners are the source of what ServerGuardian knows, and anyone can sign u
 
 ## If ServerGuardian is down
 
-By default the plugin **lets players in** when it cannot reach ServerGuardian, because a moderation tool must not stop your server accepting players. You can choose to keep players out instead. When a service limit is reached on our side (your plan, or too many requests), players are always let in.
+By default the plugin **lets players in** when it cannot reach ServerGuardian, because a moderation tool must not stop your server accepting players. You can choose to keep players out instead, in the plugin's [settings](/guide/settings). When a service limit is reached on our side (your plan, or too many requests), players are always let in.

@@ -17,7 +17,7 @@ As with bans recorded by the plugin, the reason you type is shown to the player 
 
 ## Keeping one server's list to itself
 
-Each server has a switch, **Share bans with my other servers**, on by default. Turn it off for a server that should have its own rules, for example a roleplay server and a racing server that ban for different things. A server with sharing off:
+Each server has a setting, **share bans**, on by default, in the plugin's [config file](/guide/settings). Turn it off for a server that should have its own rules, for example a roleplay server and a racing server that ban for different things. A server with sharing off:
 
 - does not use bans recorded on your other servers, and
 - does not give its own bans to your other servers.

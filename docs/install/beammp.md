@@ -29,6 +29,10 @@ To also record the built-in `kick`, set `"recordKicks": true` in `config.json`. 
 
 Once you switch on [player reports](/operators/reports) for the server in the portal, players can type `/report <player> <category> [note]` in chat. The first use shows a notice and asks them to repeat the command to confirm. Nothing but the category, an optional short note and the account ids of the two players is sent.
 
+## Settings
+
+How this server behaves is set in the plugin's config file, next to the API key, not in the portal. In `config.json`, in the `settings` object: `failMode`, `gameEvents`, `reports`, `shareBans` and `youthOriented`. Each setting, its default and what it does are on the [server settings](/guide/settings) page. Settings you leave out keep the value the server already had, so updating the plugin never resets them.
+
 ## Good to know
 
 - Players with a **BeamMP guest** session have no account id, so they cannot be checked or banned. They are let in and nothing is sent. Because of that, guests are a way around any ban. To refuse them, set `AllowGuests = false` under `[General]` in your server's `ServerConfig.toml` (or set the environment variable `BEAMMP_ALLOW_GUESTS=false`). That is BeamMP's own setting, so whether to use it is up to you.

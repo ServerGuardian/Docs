@@ -8,7 +8,7 @@ Reports work with the latest BeamMP, FiveM and Minecraft plugins. They are **off
 
 ## Turning it on
 
-In the portal, open the server's settings and switch on **Let players report each other in game**. The plugin then offers every player a command:
+In the plugin's [config file](/guide/settings), set `reports` to on. The plugin then offers every player a command:
 
 ```
 /report <player> <category> [note]
