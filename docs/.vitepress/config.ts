@@ -37,6 +37,7 @@ export default defineConfig({
       {
         text: "Tools for your servers",
         items: [
+          { text: "Your team", link: "/operators/team" },
           { text: "Dashboards", link: "/operators/dashboards" },
           { text: "Live view", link: "/operators/live" },
           { text: "Ban list", link: "/operators/ban-list" },

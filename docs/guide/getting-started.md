@@ -18,6 +18,10 @@ Then [install the plugin](/install/beammp) for your game and set your [rules](/g
 
 You can remove a server from its Settings tab. Its API keys stop working straight away and it stops counting towards your plan. What it recorded is kept until it expires, because those bans still protect other servers.
 
+## Your team
+
+You can add moderators, admins and viewers, each with their own sign-in and only the access they need: see [your team](/operators/team).
+
 ## Appeals
 
 Players can appeal a block or a ban you recorded. You have **14 days** to answer; after that the ServerGuardian team takes over. You will see appeals about your own servers under **Appeals** in the portal. You never see who the player is.
