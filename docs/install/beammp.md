@@ -10,8 +10,9 @@ The plugin passes its automated tests against a simulated BeamMP server. It has 
 
 1. Copy `main.lua`, `sg_core.lua` and `config.example.json` into `Resources/Server/ServerGuardian/` on your BeamMP server.
 2. Copy `config.example.json` to `config.json`, and set `apiBase` and `apiKey` (the key you made in the portal). Keep `config.json` readable only by the server's user.
-3. Make sure **`curl`** is installed on the host. BeamMP's Lua cannot make web requests itself, so the plugin calls `curl`.
-4. Restart the server.
+3. Optional: `noticeDelaySeconds` in `config.json` (default 15). BeamMP tells plugins a player has joined while their game is still loading, so the plugin shows its notice and checks the player when their first car spawns or they first speak, or after this many seconds, whichever is first. `0` acts at once, and the notice may be missed.
+4. Make sure **`curl`** is installed on the host. BeamMP's Lua cannot make web requests itself, so the plugin calls `curl`.
+5. Restart the server.
 
 ## Recording bans
 
