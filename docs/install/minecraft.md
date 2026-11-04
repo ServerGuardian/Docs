@@ -4,7 +4,7 @@
 The plugin compiles and has unit tests for its plain logic, but it has not run on a real Paper server.
 :::
 
-The plugin is in the [Minecraft_Plugin](https://github.com/ServerGuardian/Minecraft_Plugin) repository. It needs JDK 21 to build.
+The plugin is in the [Minecraft_Plugin](https://github.com/ServerGuardian/Minecraft_Plugin) repository. It needs JDK 21 to build, and there is no ready-made jar to download yet. The key for step 3 comes from **API keys** in the portal (see [getting started](/guide/getting-started)).
 
 ## Install
 

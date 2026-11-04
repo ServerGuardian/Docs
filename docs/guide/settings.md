@@ -10,6 +10,8 @@ A server's behaviour is set in **its plugin's config file**, next to its API key
 | **Share bans**     | on or off                        | on             | Use bans recorded on your other servers here too, and share this server's bans with them. Turn it off for a server that should keep its own list. See the [ban list](/operators/ban-list).                |
 | **Youth-oriented** | yes or no                        | no             | This server or event is for players under 18. Their data is handled more strictly: no hardware check, shorter records, and game events are neither kept nor sent on.                                      |
 
+**Chat moderation** (`chatModeration`, off by default) has the plugin send chat lines to be checked against rules you set in the portal. See [chat moderation](/operators/chat-moderation) before turning it on: it changes the notice your players see.
+
 ## Where to set them
 
 | Game              | Where                                                                        | Names                                                                                                                                                                                                                  |

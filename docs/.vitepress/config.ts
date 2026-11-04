@@ -10,7 +10,8 @@ export default defineConfig({
   // "/" on a custom domain. Set DOCS_BASE=/Docs/ to serve from https://serverguardian.github.io/Docs/.
   base: process.env.DOCS_BASE ?? "/",
   cleanUrls: true,
-  lastUpdated: true,
+  // Dates come from git history; a build without it (the test instance image) sets DOCS_LAST_UPDATED=false.
+  lastUpdated: process.env.DOCS_LAST_UPDATED !== "false",
   head: [["link", { rel: "icon", href: "/logo.svg", type: "image/svg+xml" }]],
   themeConfig: {
     logo: "/logo.svg",
@@ -42,6 +43,7 @@ export default defineConfig({
           { text: "Live view", link: "/operators/live" },
           { text: "Ban list", link: "/operators/ban-list" },
           { text: "Player reports", link: "/operators/reports" },
+          { text: "Chat moderation", link: "/operators/chat-moderation" },
           { text: "Game events", link: "/operators/game-events" },
           { text: "Webhooks", link: "/operators/webhooks" },
         ],

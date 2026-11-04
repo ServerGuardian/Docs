@@ -6,7 +6,7 @@ When a player joins your server, the ServerGuardian plugin asks one question: **
 
 - The player's **game account id** (a BeamMP account, a Cfx.re licence and Steam id, or a Minecraft UUID) and **IP address**.
 - On FiveM only, and only if the player says yes to an optional prompt, **hardware tokens** the game supplies. BeamMP and Minecraft servers cannot read a hardware id at all.
-- Nothing else. **No chat**, no player names, no screenshots. The service refuses any extra field.
+- Nothing else. **No chat** (unless the server owner turns on [chat moderation](/operators/chat-moderation), which is off by default and changes the join notice), no player names, no screenshots. The service refuses any extra field.
 
 Before sending anything, the plugin shows the player a notice that ServerGuardian is in use (on BeamMP and Minecraft this has to be in chat, right after joining).
 

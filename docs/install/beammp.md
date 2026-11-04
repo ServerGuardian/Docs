@@ -4,7 +4,7 @@
 The plugin passes its automated tests against a simulated BeamMP server. It has not run on a real one.
 :::
 
-The plugin is in the [BeamMP_Plugin](https://github.com/ServerGuardian/BeamMP_Plugin) repository.
+**Download:** the **Install the plugin** card on your server's page in the portal. The source is in the [BeamMP_Plugin](https://github.com/ServerGuardian/BeamMP_Plugin) repository. The key for step 2 comes from **API keys** in the portal (see [getting started](/guide/getting-started)).
 
 ## Install
 

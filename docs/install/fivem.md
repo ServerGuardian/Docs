@@ -4,7 +4,7 @@
 The resource passes its automated tests against a simulated FiveM server. It has not run on a real one.
 :::
 
-The resource is in the [FiveM_Plugin](https://github.com/ServerGuardian/FiveM_Plugin) repository.
+**Download:** the **Install the plugin** card on your server's page in the portal. The source is in the [FiveM_Plugin](https://github.com/ServerGuardian/FiveM_Plugin) repository. The key below comes from **API keys** in the portal (see [getting started](/guide/getting-started)).
 
 ## Install
 
