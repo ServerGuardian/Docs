@@ -27,7 +27,11 @@ In `config.json` you can set:
 - `popupFallbackSeconds`: how long to wait for the popup before using chat (10 to 300, default 45).
 - `clientModFile`: the zip's name, if you renamed it.
 
-The notice itself comes from ServerGuardian and cannot be changed here. The popup has not been run inside the game by us yet: tell us how it looks.
+The notice itself comes from ServerGuardian and cannot be changed here.
+
+### The report window
+
+With the client mod and [player reports](/operators/reports) turned on, a player who types `/report` on its own gets a window with a list of the other players and a list of reasons, instead of having to type the command. The typed command still works, and a player without the mod uses it. In `config.json`, `reportWindow` has `enabled` (`false` keeps only the typed command), `title`, and `reasons`: the categories to offer (`cheating`, `griefing`, `harassment`, `hate_or_abuse`, `other`), each either an id or `{ "id": "griefing", "label": "Wrecking other cars" }` to rename it. By default all five are offered. Guests (players with no BeamMP account) cannot be reported. The popup has not been run inside the game by us yet: tell us how it looks.
 
 ## Recording bans
 

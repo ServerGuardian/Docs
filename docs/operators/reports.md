@@ -14,6 +14,8 @@ In the plugin's [config file](/guide/settings), set `reports` to on. The plugin 
 /report <player> <category> [note]
 ```
 
+On BeamMP servers where the [client mod](/install/beammp#the-notice-popup) is installed, `/report` on its own opens a window instead, with a list of the other players and a list of reasons (see [the report window](/install/beammp#the-report-window)); `/report` with words after it is always the typed command.
+
 The categories are cheating, griefing, harassment, hate or abuse, and something else. The note is optional and at most 200 characters.
 
 The first time a player uses the command they are shown a short notice (it says the report goes to the server's staff, is kept for a limited time, and is not a chat log) and asked to run the command again to confirm. Nothing is sent until they do.
