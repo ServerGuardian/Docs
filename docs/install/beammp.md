@@ -11,8 +11,23 @@ The plugin passes its automated tests against a simulated BeamMP server. It has 
 1. Copy `main.lua`, `sg_core.lua` and `config.example.json` into `Resources/Server/ServerGuardian/` on your BeamMP server.
 2. Copy `config.example.json` to `config.json`, and set `apiBase` and `apiKey` (the key you made in the portal). Keep `config.json` readable only by the server's user.
 3. Optional: `noticeDelaySeconds` in `config.json` (default 15). BeamMP tells plugins a player has joined while their game is still loading, so the plugin shows its notice and checks the player when their first car spawns or they first speak, or after this many seconds, whichever is first. `0` acts at once, and the notice may be missed.
-4. Make sure **`curl`** is installed on the host. BeamMP's Lua cannot make web requests itself, so the plugin calls `curl`.
-5. Restart the server.
+4. Recommended: put **`ServerGuardianClient.zip`** (the client mod, from the **Install the plugin** card in the portal) in the server's `Resources/Client/` folder. Players download it automatically, and it shows the join notice as a popup in the game once their game has finished loading, then tells the server it was shown. Without it the notice is sent in chat after the wait in step 3. See [the notice popup](#the-notice-popup) below.
+5. Make sure **`curl`** is installed on the host. BeamMP's Lua cannot make web requests itself, so the plugin calls `curl`.
+6. Restart the server.
+
+## The notice popup
+
+With the client mod in `Resources/Client/`, the plugin sends the notice to the player's game when it has finished loading and checks the player once it has been shown. The plugin says `client mod found` or `client mod not found` in the console when it starts. A player whose game does not answer within `popupFallbackSeconds` (default 45) gets the notice in chat instead and is checked then.
+
+In `config.json` you can set:
+
+- `clientPopup`: `false` turns the popup off and keeps the chat notice, even with the mod installed (default `true`).
+- `popup.title` and `popup.button`: the popup's title and button text (defaults `ServerGuardian` and `I understand`).
+- `popup.extra`: up to five lines of your own text (a welcome, your rules) shown below the notice, as plain text.
+- `popupFallbackSeconds`: how long to wait for the popup before using chat (10 to 300, default 45).
+- `clientModFile`: the zip's name, if you renamed it.
+
+The notice itself comes from ServerGuardian and cannot be changed here. The popup has not been run inside the game by us yet: tell us how it looks.
 
 ## Recording bans
 
